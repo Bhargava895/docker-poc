@@ -12,7 +12,7 @@ services:
       - "3306:3306"
 
   backend:
-    build: ./backend
+    build: /home/ubuntu/docker-poc/backend
     environment:
       DATABASE_HOST: mysql
       DATABASE_NAME: my_database
@@ -25,7 +25,7 @@ services:
       - "8081:8081"
 
   frontend:
-    build: ./frontend
+    build: /home/ubuntu/docker-poc/frontend
     ports:
       - "5000:5000"
 
